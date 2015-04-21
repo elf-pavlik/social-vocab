@@ -1,0 +1,27 @@
+<h1 id="follow">Follow</h1>
+<p>(activity)</p>
+<p>Act of following another agent</p>
+<ul>
+<li>verb: <strong><a href="../../verb/follows">follows</a></strong></li>
+<li>qualified relation: <strong><a href="../../qualified-relation/Following">Following</a></strong></li>
+</ul>
+<p><img src="https://docs.google.com/drawings/d/1zFWdjo_phs60Lr7dyoXyd4PQ9hOBxadlU8FZDQIAPHg/pub?w=960&amp;h=540" alt="follows"></p>
+<pre><code class="lang-ttl">&lt;https:/rhiaro.co.uk&gt; a :Person ;
+  :name &quot;Amy Guy&quot; .
+
+&lt;https://wwelves.org/perpetual-tripper&gt; a :Person ;
+  :name &quot;elf Pavlik* ;
+  :follows &lt;https://rhiaro.co.uk&gt; .
+
+&lt;https://wwelves.org/perpetual-tripper/rel/3242&gt; a :Following ;
+  rdf:subject &lt;https://wwelves.org/perpetual-tripper&gt; ;
+  rdf:predicate :follows ;
+  rdf:object &lt;https:/rhiaro.co.uk&gt; ;
+  :startTime &quot;16 July 2014&quot; .
+
+&lt;https://wwelves.org/perpetual-tripper/log/2762&gt; a :Follow ;
+  as:actor `&lt;https://wwelves.org/perpetual-tripper&gt; ;
+  as:object &lt;https:/rhiaro.co.uk&gt; ;
+  as:result `&lt;https://wwelves.org/perpetual-tripper/rel/3242&gt; .
+</code></pre>
+

@@ -1,0 +1,61 @@
+<h1 id="travel">Travel</h1>
+<p>(verb)</p>
+<p>Act of traveling from origin to destination.</p>
+<p>see also: Stay</p>
+<ul>
+<li>relation: <strong><a href="../../relation/present">present</a></strong> (agent at origin and destination)</li>
+</ul>
+<p>same value for as:actor and as:object
+union of Depart and Arrive
+as:result Traveling and possibly Arriving and Departing</p>
+<p><img src="https://docs.google.com/drawings/d/1KS7T38IAFj6CG77_CcJbGsgwEm0ndngCeOTXGIT1JO8/pub?w=1138&amp;h=780" alt="follows"></p>
+<pre><code class="lang-ttl"># Agents &amp; Objects
+&lt;https://wwelves.org/perpetual-tripper&gt; a :Person ;
+  :name &quot;elf Pavlik&quot; .
+
+&lt;http://sws.geonames.org/2950159/&gt; a :City ;
+  :name &quot;Berlin&quot; .
+
+&lt;http://sws.geonames.org/2988507/&gt; a :City ;
+  :name &quot;Paris&quot; .
+
+&lt;https://plp.hackers4peace.net/30492840928420348293&gt; a :Bus .
+
+
+# Activities
+&lt;https://wwelves.org/perpetual-tripper/log/393932432&gt; a :Depart ;
+  as:actor &lt;https://wwelves.org/perpetual-tripper&gt; ;
+  as:origin &lt;http://sws.geonames.org/2950159/&gt; ;
+  as:instrument &lt;https://plp.hackers4peace.net/30492840928420348293&gt; ;
+  :startTime &quot;30 April 2015&quot; .
+
+&lt;https://wwelves.org/perpetual-tripper/log/3939391010&gt; a :Arrive ;
+  as:actor &lt;https://wwelves.org/perpetual-tripper&gt; ;
+  as:destination &lt;http://sws.geonames.org/29507/&gt; ;
+  as:instrument &lt;https://plp.hackers4peace.net/30492840928420348293&gt; ;
+  :endTime &quot;30 April 2015&quot; .
+
+&lt;https://wwelves.org/perpetual-tripper/log/3939392&gt; a :Travel ;
+  as:actor &lt;https://wwelves.org/perpetual-tripper&gt; ;
+  as:origin &lt;http://sws.geonames.org/2950159/&gt; ;
+  as:destination &lt;http://sws.geonames.org/29507/&gt; ;
+  as:instrument &lt;https://plp.hackers4peace.net/30492840928420348293&gt; ;
+  :startTime &quot;30 April 2015&quot; ;
+  :endTime &quot;30 April 2015&quot; ;
+  :contains &lt;https://wwelves.org/perpetual-tripper/log/393932432&gt; ,
+    &lt;https://wwelves.org/perpetual-tripper/log/3939391010&gt; .
+
+# Qualified Relations
+&lt;https://wwelves.org/perpetual-tripper/rel/393013&gt; a :Presence ;
+  rdf:subject &lt;https://wwelves.org/perpetual-tripper&gt; ;
+  rdf:predicate :present ;
+  rdf:object &lt;http://sws.geonames.org/2988159/&gt; ;
+  :interaction &lt;https://wwelves.org/perpetual-tripper/log/393932432&gt; .
+
+&lt;https://wwelves.org/perpetual-tripper/rel/393210&gt; a :Presence ;
+  rdf:subject &lt;https://wwelves.org/perpetual-tripper&gt; ;
+  rdf:predicate :present ;
+  rdf:object &lt;http://sws.geonames.org/2988507/&gt; ;
+  :interaction &lt;https://wwelves.org/perpetual-tripper/log/3939391010&gt; .
+</code></pre>
+
